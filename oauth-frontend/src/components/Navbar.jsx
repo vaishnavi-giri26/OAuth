@@ -6,8 +6,7 @@ export default function Navbar({ user, setUser }) {
 
   const logout = async () => {
     try {
-      
-      await axios.get("http://localhost:5000/auth/logout", { withCredentials: true });
+      await axios.get(`${API_BASE_URL}/auth/logout`, { withCredentials: true });
       
       
       setUser(null);
