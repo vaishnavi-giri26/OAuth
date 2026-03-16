@@ -20,8 +20,11 @@ const app = express();
 ================================ */
 app.use(
   cors({
-    origin: "https://oauth-frontend-esm9.onrender.com",
-    credentials: true,
+    origin: [
+      "http://localhost:5173",
+      "https://oauth-frontend-esm9.onrender.com"
+    ],
+    credentials: true
   })
 );
 
@@ -47,9 +50,9 @@ app.use(
     }),
 
     cookie: {
-      secure: false,       // IMPORTANT for localhost
+      secure: process.env.NODE_ENV === "production",
       httpOnly: true,
-      sameSite: "none",     // IMPORTANT for localhost
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
       maxAge: 24 * 60 * 60 * 1000,
     },
   })
