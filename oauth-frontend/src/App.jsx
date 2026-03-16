@@ -16,8 +16,7 @@ function App() {
   const [loading, setLoading] = useState(true);
 
   // Use the Netlify variable, or fallback to localhost for development
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
-//const API_BASE_URL = "https://oauth-backend-8a74.onrender.com";
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://oauth-backend-s5bk.onrender.com";
   useEffect(() => {
     const fetchUser = async () => {
       try {
