@@ -6,7 +6,7 @@ export default function Dashboard() {
   const [error, setError] = useState(false);
 
   // Use the dynamic API URL from environment variables
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://oauth-backend-s5bk.onrender.com"
   useEffect(() => {
     axios.get(`${API_BASE_URL}/auth/me`, { withCredentials: true })
       .then(res => {
