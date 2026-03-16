@@ -49,7 +49,7 @@ app.use(
     cookie: {
       secure: false,       // IMPORTANT for localhost
       httpOnly: true,
-      sameSite: "lax",     // IMPORTANT for localhost
+      sameSite: "none",     // IMPORTANT for localhost
       maxAge: 24 * 60 * 60 * 1000,
     },
   })
