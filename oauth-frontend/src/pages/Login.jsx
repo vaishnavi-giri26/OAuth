@@ -1,6 +1,6 @@
 export default function Login() {
   // Use the Netlify variable, or fallback to localhost for development
-  const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000"
+  const API_BASE_URL = import.meta.env.VITE_API_URL || "https://oauth-backend-s5bk.onrender.com"
 
   const handleLogin = () => {
     // Redirects the user to the DYNAMIC backend OAuth route
