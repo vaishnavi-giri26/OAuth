@@ -20,7 +20,7 @@ const app = express();
 ================================ */
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://oauth-frontend-esm9.onrender.com",
     credentials: true,
   })
 );
